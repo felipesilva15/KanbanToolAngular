@@ -27,7 +27,8 @@
       "descricao": "",
       "data_previsao": "",
       "coluna_id": 1,
-      "categoria_id": 1
+      "categoria_id": 1,
+      "ordem": 1
     }
   ]
 }
