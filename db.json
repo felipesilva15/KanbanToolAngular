@@ -1,0 +1,33 @@
+{
+  "coluna": [
+    {
+      "id": 1,
+      "nome": "To do"
+    },
+    {
+      "id": 2,
+      "nome": "Doing"
+    },
+    {
+      "id": 3,
+      "nome": "Done"
+    }
+  ],
+  "categoria": [
+    {
+      "id": 1,
+      "nome": "Financeiro",
+      "cor": "#66FF66"
+    }
+  ],
+  "tarefa": [
+    {
+      "id": 1,
+      "titulo": "",
+      "descricao": "",
+      "data_previsao": "",
+      "coluna_id": 1,
+      "categoria_id": 1
+    }
+  ]
+}
