@@ -19,6 +19,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+
+// Components
 import { CategoryIndexComponent } from './view/category/category-index/category-index.component';
 import { CategoryFormComponent } from './view/category/category-form/category-form.component';
 import { ColumnFormComponent } from './view/column/column-form/column-form.component';
@@ -50,7 +53,8 @@ import { TaskFormComponent } from './view/task/task-form/task-form.component';
     MatListModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
