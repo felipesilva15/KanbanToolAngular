@@ -12,7 +12,7 @@ export class ColumnService {
   private readonly urlApi = 'http://localhost:3000/columns';
 
   list(): Observable<Column[]> {
-    return this.http.get<Column[]>(this.urlApi);
+    return this.http.get<Column[]>(`${this.urlApi}?_sort=id&_order=desc`);
   }
 
   getById(id: number): Observable<Column> {
