@@ -19,22 +19,22 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { CategoriaConsultarComponent } from './views/categoria-consultar/categoria-consultar.component';
-import { CategoriaDigitarComponent } from './views/categoria-digitar/categoria-digitar.component';
-import { TarefaConsultarComponent } from './views/tarefa-consultar/tarefa-consultar.component';
-import { TarefaDigitarComponent } from './views/tarefa-digitar/tarefa-digitar.component';
-import { ColunaDigitarComponent } from './views/coluna-digitar/coluna-digitar.component';
-import { ColunaConsultarComponent } from './views/coluna-consultar/coluna-consultar.component';
+import { CategoryIndexComponent } from './view/category/category-index/category-index.component';
+import { CategoryFormComponent } from './view/category/category-form/category-form.component';
+import { ColumnFormComponent } from './view/column/column-form/column-form.component';
+import { ColumnIndexComponent } from './view/column/column-index/column-index.component';
+import { TaskIndexComponent } from './view/task/task-index/task-index.component';
+import { TaskFormComponent } from './view/task/task-form/task-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoriaConsultarComponent,
-    CategoriaDigitarComponent,
-    TarefaConsultarComponent,
-    TarefaDigitarComponent,
-    ColunaDigitarComponent,
-    ColunaConsultarComponent
+    CategoryIndexComponent,
+    CategoryFormComponent,
+    ColumnFormComponent,
+    ColumnIndexComponent,
+    TaskIndexComponent,
+    TaskFormComponent
   ],
   imports: [
     BrowserModule,

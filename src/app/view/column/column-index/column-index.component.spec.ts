@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TarefaDigitarComponent } from './tarefa-digitar.component';
+import { ColumnIndexComponent } from './column-index.component';
 
-describe('TarefaDigitarComponent', () => {
-  let component: TarefaDigitarComponent;
-  let fixture: ComponentFixture<TarefaDigitarComponent>;
+describe('ColumnIndexComponent', () => {
+  let component: ColumnIndexComponent;
+  let fixture: ComponentFixture<ColumnIndexComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TarefaDigitarComponent ]
+      declarations: [ ColumnIndexComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TarefaDigitarComponent);
+    fixture = TestBed.createComponent(ColumnIndexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

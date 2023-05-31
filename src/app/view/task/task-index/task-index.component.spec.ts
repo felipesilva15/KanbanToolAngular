@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ColunaDigitarComponent } from './coluna-digitar.component';
+import { TaskIndexComponent } from './task-index.component';
 
-describe('ColunaDigitarComponent', () => {
-  let component: ColunaDigitarComponent;
-  let fixture: ComponentFixture<ColunaDigitarComponent>;
+describe('TaskIndexComponent', () => {
+  let component: TaskIndexComponent;
+  let fixture: ComponentFixture<TaskIndexComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ColunaDigitarComponent ]
+      declarations: [ TaskIndexComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ColunaDigitarComponent);
+    fixture = TestBed.createComponent(TaskIndexComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
