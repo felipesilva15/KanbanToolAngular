@@ -1,0 +1,11 @@
+#subheader-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem; 
+}
+
+.color-preview {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}

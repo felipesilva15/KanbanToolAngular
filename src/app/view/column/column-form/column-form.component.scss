@@ -1,0 +1,14 @@
+#subheader-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem; 
+}
+
+.full-width {
+    width: 100%;
+}
+
+.div-separate {
+    display: flex;
+    gap: 8px;
+}

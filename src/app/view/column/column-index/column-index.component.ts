@@ -25,11 +25,6 @@ export class ColumnIndexComponent {
     this.list()
   }
 
-  // ngAfterViewInit() {
-  //   this.dataSource.paginator = this.paginator;
-  //   this.dataSource.sort = this.sort;
-  // }
-
   list(): void {
     this.columnService.list().subscribe(
       (res) => {

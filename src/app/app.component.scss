@@ -3,7 +3,7 @@ mat-toolbar-row > span {
 }
 
 mat-sidenav-content {
-    min-height: calc(100vh - 64px);
+    min-height: calc(100vh - 64px - 3rem);
     padding: 1.5rem;
 }
 

@@ -17,7 +17,57 @@
     {
       "id": 1,
       "name": "Financeiro",
-      "color": "#66FF66"
+      "color": "#3bf73b"
+    },
+    {
+      "id": 2,
+      "name": "Estudos",
+      "color": "#1763de"
+    },
+    {
+      "id": 3,
+      "name": "Compras",
+      "color": "#f3b712"
+    },
+    {
+      "id": 4,
+      "name": "Viagem",
+      "color": "#ec1818"
+    },
+    {
+      "id": 5,
+      "name": "Faculdade",
+      "color": "#3c2716"
+    },
+    {
+      "id": 6,
+      "name": "Trabalho",
+      "color": "#ffffff"
+    },
+    {
+      "id": 7,
+      "name": "Serviços",
+      "color": "#7d47e1"
+    },
+    {
+      "id": 8,
+      "name": "Jogos",
+      "color": "#030303"
+    },
+    {
+      "id": 9,
+      "name": "Saúde",
+      "color": "#23e1d4"
+    },
+    {
+      "id": 10,
+      "name": "Outros",
+      "color": "#828282"
+    },
+    {
+      "id": 11,
+      "name": "Programação",
+      "color": "#ee20e7"
     }
   ],
   "tasks": [
