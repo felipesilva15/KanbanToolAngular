@@ -25,6 +25,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 // Components
 import { CategoryIndexComponent } from './view/category/category-index/category-index.component';
@@ -64,7 +65,8 @@ import { TaskFormComponent } from './view/task/task-form/task-form.component';
     MatPaginatorModule,
     MatSortModule,
     MatGridListModule,
-    MatSelectModule
+    MatSelectModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,31 @@
-<p>task-index works!</p>
+<div id="subheader-container">
+    <h2>Quadro de tarefas</h2>
+    <div>
+        <a mat-mini-fab color="primary" routerLink="form">
+            <mat-icon>add</mat-icon>
+        </a>
+    </div>
+</div>
+<div id="columns-container">
+  <div *ngFor="let column of columns" class="task-column">
+    <div>
+        <span class="font-bold">{{ column.name }}</span>
+    </div>
+    <div class="cards-container">
+        <div *ngFor="let task of tasks">
+            <div *ngIf="task.columnId == column.id">
+                <mat-card routerLink="form/{{ task.id }}" [style.border-bottom]="'2px solid ' + task.category.color">
+                    <mat-card-content>
+                        <div>{{ task.title }}</div>
+                        <div class="text-opaque">{{ task.category.name }}</div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <a routerLink="form" [queryParams]="{ columnId: column.id }" class="columns-container-footer">
+        <mat-icon>add</mat-icon>
+        <div>Adicionar uma tarefa</div>
+    </a>
+  </div>
+</div>

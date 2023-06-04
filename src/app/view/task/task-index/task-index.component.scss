@@ -1,0 +1,51 @@
+#subheader-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem; 
+}
+
+#columns-container {
+    display: flex;
+    gap: 16px;
+}
+
+.task-column {
+    border: .5px solid #868686bb;
+    border-radius: 4px;
+    width: 240px;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    height: min-content;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.cards-container mat-card-content {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.text-opaque {
+    color: #a7acb1;
+}
+
+.columns-container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: inherit!important;
+    text-decoration: none;
+}

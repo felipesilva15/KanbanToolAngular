@@ -73,8 +73,8 @@
   "tasks": [
     {
       "id": 1,
-      "title": "",
-      "description": "",
+      "title": "Pagar contas fixas",
+      "description": "Realizar o pagamento das contas fixas do mês(Água, luz, telefone, etc.)",
       "dtForecast": "",
       "order": 1,
       "columnId": 1,
@@ -82,12 +82,12 @@
     },
     {
       "id": 3,
-      "title": "",
-      "description": "",
+      "title": "Limpar a casa",
+      "description": "Tarefa doméstica para a limpeza da casa",
       "dtForecast": "",
-      "order": 0,
-      "columnId": 0,
-      "categoryId": 0
+      "order": 1,
+      "columnId": 1,
+      "categoryId": 10
     }
   ]
 }
