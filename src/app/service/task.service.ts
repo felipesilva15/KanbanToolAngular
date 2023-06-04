@@ -10,5 +10,25 @@ import { environment } from 'src/environments/environment';
 export class TaskService {
   constructor(private http: HttpClient) { }
 
-  private readonly baseUrl = `${environment.apiUrl}/columns`;
+  private readonly baseUrl = `${environment.apiUrl}/tasks`;
+
+  list(): Observable<Task[]> {
+    return this.http.get<Task[]>(`${this.baseUrl}?_sort=id&_order=desc&_expand=category&_expand=column`);
+  }
+
+  getById(id: number): Observable<Task> {
+    return this.http.get<Task>(`${this.baseUrl}/${id}`);
+  }
+
+  insert(task: Task): Observable<Task> {
+    return this.http.post<Task>(this.baseUrl, task);
+  }
+
+  update(task: Task, id: number): Observable<Task> {
+    return this.http.put<Task>(`${this.baseUrl}/${id}`, task);
+  }
+
+  delete(id: number): Observable<Task> {
+    return this.http.delete<Task>(`${this.baseUrl}/${id}`);
+  }
 }

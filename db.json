@@ -79,6 +79,15 @@
       "order": 1,
       "columnId": 1,
       "categoryId": 1
+    },
+    {
+      "id": 3,
+      "title": "",
+      "description": "",
+      "dtForecast": "",
+      "order": 0,
+      "columnId": 0,
+      "categoryId": 0
     }
   ]
 }
