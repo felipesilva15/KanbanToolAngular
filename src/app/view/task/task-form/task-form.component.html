@@ -46,6 +46,9 @@
           <mat-label>Categoria</mat-label>
           <mat-select [(ngModel)]="task.categoryId" required>
             <mat-option>--</mat-option>
+            <mat-option *ngFor="let category of categories" [value]="category.id">
+              {{ category.name }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
       </mat-grid-tile>
@@ -60,9 +63,9 @@
           <mat-label>Coluna</mat-label>
           <mat-select [(ngModel)]="task.columnId" required>
             <mat-option>--</mat-option>
-            <!-- <mat-option *ngFor="let animal of animals" [value]="animal">
-              {{ animal.name }}
-            </mat-option> -->
+            <mat-option *ngFor="let column of columns" [value]="column.id">
+              {{ column.name }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
       </mat-grid-tile>

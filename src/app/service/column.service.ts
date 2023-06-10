@@ -13,7 +13,7 @@ export class ColumnService {
   private readonly baseUrl = `${environment.apiUrl}/columns`;
 
   list(): Observable<Column[]> {
-    return this.http.get<Column[]>(`${this.baseUrl}?_sort=id&_order=desc`);
+    return this.http.get<Column[]>(`${this.baseUrl}`);
   }
 
   getById(id: number): Observable<Column> {

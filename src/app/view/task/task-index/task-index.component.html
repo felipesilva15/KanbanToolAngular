@@ -6,14 +6,18 @@
         </a>
     </div>
 </div>
-<div id="columns-container">
-  <div *ngFor="let column of columns" class="task-column">
-    <div>
-        <span class="font-bold">{{ column.name }}</span>
-    </div>
-    <div class="cards-container">
-        <div *ngFor="let task of tasks">
-            <div *ngIf="task.columnId == column.id">
+<div id="columns-container" cdkDropListGroup>
+    <div class="task-column">
+        <div>
+            <span class="font-bold">To do</span>
+        </div>
+        <div class="cards-container" 
+        cdkDropList
+        [cdkDropListData]="toDo"
+        (cdkDropListDropped)="drop($event)"
+        columnIdProp="1">
+            <div *ngFor="let task of toDo" cdkDrag class="card-box">
+                <div class="custom-placeholder" *cdkDragPlaceholder></div>
                 <mat-card routerLink="form/{{ task.id }}" [style.border-bottom]="'2px solid ' + task.category.color">
                     <mat-card-content>
                         <div>{{ task.title }}</div>
@@ -22,10 +26,57 @@
                 </mat-card>
             </div>
         </div>
-    </div>
-    <a routerLink="form" [queryParams]="{ columnId: column.id }" class="columns-container-footer">
-        <mat-icon>add</mat-icon>
-        <div>Adicionar uma tarefa</div>
-    </a>
-  </div>
+        <a routerLink="form" [queryParams]="{ columnId: 1 }" class="columns-container-footer">
+            <mat-icon>add</mat-icon>
+            <div>Adicionar uma tarefa</div>
+        </a>
+      </div>
+      <div class="task-column">
+        <div>
+            <span class="font-bold">Doing</span>
+        </div>
+        <div class="cards-container" 
+        cdkDropList
+        [cdkDropListData]="doing"
+        (cdkDropListDropped)="drop($event)"
+        columnIdProp="2">
+            <div *ngFor="let task of doing" cdkDrag class="card-box">
+                <div class="custom-placeholder" *cdkDragPlaceholder></div>
+                <mat-card routerLink="form/{{ task.id }}" [style.border-bottom]="'2px solid ' + task.category.color">
+                    <mat-card-content>
+                        <div>{{ task.title }}</div>
+                        <div class="text-opaque">{{ task.category.name }}</div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <a routerLink="form" [queryParams]="{ columnId: 2 }" class="columns-container-footer">
+            <mat-icon>add</mat-icon>
+            <div>Adicionar uma tarefa</div>
+        </a>
+      </div>
+      <div class="task-column">
+        <div>
+            <span class="font-bold">Done</span>
+        </div>
+        <div class="cards-container" 
+        cdkDropList
+        [cdkDropListData]="done"
+        (cdkDropListDropped)="drop($event)"
+        columnIdProp="3">
+            <div *ngFor="let task of done" cdkDrag class="card-box">
+                <div class="custom-placeholder" *cdkDragPlaceholder></div>
+                <mat-card routerLink="form/{{ task.id }}" [style.border-bottom]="'2px solid ' + task.category.color">
+                    <mat-card-content>
+                        <div>{{ task.title }}</div>
+                        <div class="text-opaque">{{ task.category.name }}</div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+        <a routerLink="form" [queryParams]="{ columnId: 3 }" class="columns-container-footer">
+            <mat-icon>add</mat-icon>
+            <div>Adicionar uma tarefa</div>
+        </a>
+      </div>
 </div>

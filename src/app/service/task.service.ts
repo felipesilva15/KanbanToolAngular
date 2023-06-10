@@ -13,7 +13,7 @@ export class TaskService {
   private readonly baseUrl = `${environment.apiUrl}/tasks`;
 
   list(): Observable<Task[]> {
-    return this.http.get<Task[]>(`${this.baseUrl}?_sort=id&_order=desc&_expand=category&_expand=column`);
+    return this.http.get<Task[]>(`${this.baseUrl}?_sort=order&_expand=category&_expand=column`);
   }
 
   getById(id: number): Observable<Task> {

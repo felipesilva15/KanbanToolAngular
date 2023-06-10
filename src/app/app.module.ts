@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Common modules
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgFor } from '@angular/common';
 
 // Angular material modules
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -34,6 +35,15 @@ import { ColumnFormComponent } from './view/column/column-form/column-form.compo
 import { ColumnIndexComponent } from './view/column/column-index/column-index.component';
 import { TaskIndexComponent } from './view/task/task-index/task-index.component';
 import { TaskFormComponent } from './view/task/task-form/task-form.component';
+
+import {
+  CdkDragDrop,
+  CdkDrag,
+  CdkDropList,
+  CdkDropListGroup,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -66,7 +76,8 @@ import { TaskFormComponent } from './view/task/task-form/task-form.component';
     MatSortModule,
     MatGridListModule,
     MatSelectModule,
-    DragDropModule
+    DragDropModule,
+    CdkDropListGroup, CdkDropList, NgFor, CdkDrag
   ],
   providers: [],
   bootstrap: [AppComponent]
