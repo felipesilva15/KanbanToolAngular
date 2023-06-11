@@ -17,7 +17,7 @@
     <div>
       <mat-form-field class="full-width">
         <mat-label>Título</mat-label>
-        <input type="text" matInput [(ngModel)]="task.title" />
+        <input type="text" matInput [(ngModel)]="task.title" required/>
       </mat-form-field>
     </div>
     <div>
@@ -26,20 +26,6 @@
         <textarea matInput [(ngModel)]="task.description"></textarea>
       </mat-form-field>
     </div>
-    <!-- <div fxLayout="row wrap">
-            <div fxFlex="50" fxFill fxLayoutAlign="start center">
-                <mat-form-field class="full-width">
-                    <mat-label>Ordem</mat-label>
-                    <input type="number" matInput [(ngModel)]="task.order">
-                </mat-form-field>
-            </div>
-            <div fxFlex="50" fxFill fxLayoutAlign="start center">
-                <mat-form-field class="full-width">
-                    <mat-label>Data de previsão</mat-label>
-                    <input type="date" matInput [(ngModel)]="task.dtForecast">
-                </mat-form-field>
-            </div>
-        </div> -->
     <mat-grid-list cols="2" rowHeight="78px" gutterSize="24px">
       <mat-grid-tile colspan="1">
         <mat-form-field class="full-width">
@@ -55,7 +41,7 @@
       <mat-grid-tile colspan="1">
         <mat-form-field class="full-width">
           <mat-label>Ordem</mat-label>
-          <input type="number" matInput [(ngModel)]="task.order" />
+          <input type="number" matInput [(ngModel)]="task.order" required/>
         </mat-form-field>
       </mat-grid-tile>
       <mat-grid-tile>

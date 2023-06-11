@@ -80,9 +80,9 @@
       "id": 1,
       "title": "Pagar contas fixas",
       "description": "Realizar o pagamento das contas fixas do mês(Água, luz, telefone, etc.)",
-      "dtForecast": "",
-      "order": 2,
-      "columnId": 1,
+      "dtForecast": "2023-06-12",
+      "order": 1,
+      "columnId": 3,
       "categoryId": 1
     },
     {
@@ -90,18 +90,9 @@
       "title": "Limpar a casa",
       "description": "Tarefa doméstica para a limpeza da casa",
       "dtForecast": "",
-      "order": 3,
+      "order": 2,
       "columnId": 1,
       "categoryId": 12
-    },
-    {
-      "id": 4,
-      "title": "Estudar para prova de Angular",
-      "description": "Estudo sobre a prova de Angular, no qual envolvem Services, ngFor e binding.",
-      "dtForecast": "2023-06-12",
-      "order": 4,
-      "columnId": 1,
-      "categoryId": 2
     },
     {
       "id": 5,
@@ -111,6 +102,15 @@
       "order": 1,
       "columnId": 1,
       "categoryId": 1
+    },
+    {
+      "id": 7,
+      "title": "Estudar para prova de Angular",
+      "description": "",
+      "dtForecast": "2023-06-12",
+      "order": 3,
+      "columnId": 1,
+      "categoryId": 2
     }
   ]
 }

@@ -18,13 +18,13 @@
             <div id="div-input-name">
                 <mat-form-field class="full-width">
                     <mat-label>Nome</mat-label>
-                    <input type="text" matInput [(ngModel)]="category.name">
+                    <input type="text" matInput [(ngModel)]="category.name" required>
                 </mat-form-field>
             </div>
             <div>
                 <mat-form-field>
                     <mat-label>Cor</mat-label>
-                    <input type="color" matInput [(ngModel)]="category.color">
+                    <input type="color" matInput [(ngModel)]="category.color" required>
                 </mat-form-field>
             </div>
         </div>

@@ -83,4 +83,17 @@ export class TaskIndexComponent implements OnInit {
       this.taskService.update(task, task.id).subscribe();
     });
   }
+
+  delete(id: number, event: Event): void {
+    event.stopPropagation();
+
+    this.taskService.delete(id).subscribe(
+      (res) => {
+        this.list();
+      },
+      (err) => {
+        alert('Ocorreu um erro! Tente novamente mais tarde.');
+      }
+    );
+  }
 }

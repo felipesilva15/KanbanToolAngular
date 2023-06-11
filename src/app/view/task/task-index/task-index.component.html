@@ -22,6 +22,7 @@
                     <mat-card-content>
                         <div>{{ task.title }}</div>
                         <div class="text-opaque">{{ task.category.name }}</div>
+                        <mat-icon class="delete-button" (click)="delete(task.id, $event)">delete</mat-icon>
                     </mat-card-content>
                 </mat-card>
             </div>
@@ -46,6 +47,7 @@
                     <mat-card-content>
                         <div>{{ task.title }}</div>
                         <div class="text-opaque">{{ task.category.name }}</div>
+                        <mat-icon class="delete-button" (click)="delete(task.id, $event)">delete</mat-icon>
                     </mat-card-content>
                 </mat-card>
             </div>
@@ -70,6 +72,7 @@
                     <mat-card-content>
                         <div>{{ task.title }}</div>
                         <div class="text-opaque">{{ task.category.name }}</div>
+                        <mat-icon class="delete-button" (click)="delete(task.id, $event)">delete</mat-icon>
                     </mat-card-content>
                 </mat-card>
             </div>

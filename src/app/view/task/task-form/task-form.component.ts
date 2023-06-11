@@ -23,10 +23,19 @@ export class TaskFormComponent {
   columns: Array<Column> = []; 
 
   ngOnInit(): void {
+    // Route params
     this.id = parseInt(this.activatedRoute.snapshot.paramMap.get('id') ?? '');
+
+    // Query params
+    this.activatedRoute.queryParams.subscribe((params) => {
+      this.task.columnId = parseInt(params['columnId'])
+    });
+
+    // load select's data
     this.getCategories();
     this.getColumns();
 
+    // load task data for update action
     if (this.id) {
       this.action = 'Alterar'
       this.getById();
@@ -49,6 +58,20 @@ export class TaskFormComponent {
   }
 
   save(): void {
+    if (!this.task.title) {
+      alert('Informe o título da tarefa!');
+      return;
+    } else if (!this.task.categoryId) {
+      alert('Informe a categoria da tarefa!');
+      return;
+    } else if (!this.task.order) {
+      alert('Informe a ordem da tarefa!');
+      return;
+    } else if (!this.task.columnId) {
+      alert('Informe a coluna da tarefa!');
+      return;
+    } 
+
     if (this.id) {
       this.update();
     } else {

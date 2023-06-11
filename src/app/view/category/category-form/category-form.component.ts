@@ -41,6 +41,14 @@ export class CategoryFormComponent {
   }
 
   save(): void {
+    if (!this.category.name) {
+      alert('Informe o nome da categoria!');
+      return;
+    } else if (!this.category.color) {
+      alert('Informe a cor da categoria!');
+      return;
+    }  
+
     if (this.id) {
       this.update();
     } else {
