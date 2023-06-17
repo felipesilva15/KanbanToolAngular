@@ -90,9 +90,18 @@
       "title": "Limpar a casa",
       "description": "Tarefa doméstica para a limpeza da casa",
       "dtForecast": "",
-      "order": 2,
-      "columnId": 1,
-      "categoryId": 12
+      "order": 1,
+      "columnId": 2,
+      "categoryId": 12,
+      "category": {
+        "id": 12,
+        "name": "Organização",
+        "color": "#12e2b9"
+      },
+      "column": {
+        "id": 1,
+        "name": "To do"
+      }
     },
     {
       "id": 5,
@@ -101,16 +110,34 @@
       "dtForecast": "2023-06-15",
       "order": 1,
       "columnId": 1,
-      "categoryId": 1
+      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "name": "Financeiro",
+        "color": "#3bf73b"
+      },
+      "column": {
+        "id": 1,
+        "name": "To do"
+      }
     },
     {
       "id": 7,
       "title": "Estudar para prova de Angular",
       "description": "",
       "dtForecast": "2023-06-12",
-      "order": 3,
+      "order": 2,
       "columnId": 1,
-      "categoryId": 2
+      "categoryId": 2,
+      "category": {
+        "id": 2,
+        "name": "Estudos",
+        "color": "#1763de"
+      },
+      "column": {
+        "id": 1,
+        "name": "To do"
+      }
     }
   ]
 }
