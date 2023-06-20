@@ -31,4 +31,8 @@ export class TaskService {
   delete(id: number): Observable<Task> {
     return this.http.delete<Task>(`${this.baseUrl}/${id}`);
   }
+
+  getLastTaskByColumnId(columnId: number): Observable<Task[]> {
+    return this.http.get<Task[]>((`${this.baseUrl}?_sort=order&_order=desc&_expand=category&_expand=column&_limit=1&columnId=${columnId}`));
+  }
 }

@@ -41,13 +41,9 @@ export class CategoryFormComponent {
   }
 
   save(): void {
-    if (!this.category.name) {
-      alert('Informe o nome da categoria!');
+    if (!this.validate()) {
       return;
-    } else if (!this.category.color) {
-      alert('Informe a cor da categoria!');
-      return;
-    }  
+    }
 
     if (this.id) {
       this.update();
@@ -76,5 +72,17 @@ export class CategoryFormComponent {
         alert('Ocorreu um erro! Tente novamente mais tarde.');
       }
     );
+  }
+
+  validate(): boolean {
+    if (!this.category.name) {
+      alert('Informe o nome da categoria!');
+      return false;
+    } else if (!this.category.color) {
+      alert('Informe a cor da categoria!');
+      return false;
+    }  
+
+    return true;
   }
 }

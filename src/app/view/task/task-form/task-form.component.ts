@@ -29,6 +29,7 @@ export class TaskFormComponent {
     // Query params
     this.activatedRoute.queryParams.subscribe((params) => {
       this.task.columnId = parseInt(params['columnId'])
+      this.changeOrderByColumnId();
     });
 
     // load select's data
@@ -58,19 +59,9 @@ export class TaskFormComponent {
   }
 
   save(): void {
-    if (!this.task.title) {
-      alert('Informe o título da tarefa!');
+    if (!this.validate()) {
       return;
-    } else if (!this.task.categoryId) {
-      alert('Informe a categoria da tarefa!');
-      return;
-    } else if (!this.task.order) {
-      alert('Informe a ordem da tarefa!');
-      return;
-    } else if (!this.task.columnId) {
-      alert('Informe a coluna da tarefa!');
-      return;
-    } 
+    }
 
     if (this.id) {
       this.update();
@@ -121,5 +112,41 @@ export class TaskFormComponent {
         alert('Ocorreu um erro! Tente novamente mais tarde.');
       }
     );
+  }
+
+  validate(): boolean {
+    if (!this.task.title) {
+      alert('Informe o título da tarefa!');
+      return false;
+    } else if (!this.task.categoryId) {
+      alert('Informe a categoria da tarefa!');
+      return false;
+    } else if (!this.task.order) {
+      alert('Informe a ordem da tarefa!');
+      return false;
+    } else if (!this.task.columnId) {
+      alert('Informe a coluna da tarefa!');
+      return false;
+    } 
+
+    return true;
+  }
+
+  changeOrderByColumnId(): void {
+    if (!this.task.columnId) {
+      this.task.order = 0;
+      return;
+    }
+
+    this.taskService.getLastTaskByColumnId(this.task.columnId).subscribe(
+      (res) => {
+        if (!res[0]) {
+          this.task.order = 1
+          return;
+        }
+
+        this.task.order = res[0].order + 1;
+      }
+    )
   }
 }

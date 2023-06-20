@@ -82,8 +82,17 @@
       "description": "Realizar o pagamento das contas fixas do mês(Água, luz, telefone, etc.)",
       "dtForecast": "2023-06-12",
       "order": 1,
-      "columnId": 3,
-      "categoryId": 1
+      "columnId": 2,
+      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "name": "Financeiro",
+        "color": "#3bf73b"
+      },
+      "column": {
+        "id": 2,
+        "name": "Doing"
+      }
     },
     {
       "id": 3,
@@ -91,7 +100,7 @@
       "description": "Tarefa doméstica para a limpeza da casa",
       "dtForecast": "",
       "order": 1,
-      "columnId": 2,
+      "columnId": 3,
       "categoryId": 12,
       "category": {
         "id": 12,
@@ -99,8 +108,8 @@
         "color": "#12e2b9"
       },
       "column": {
-        "id": 1,
-        "name": "To do"
+        "id": 2,
+        "name": "Doing"
       }
     },
     {
