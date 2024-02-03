@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://kanban-tool-api.vercel.app'
+  apiUrl: 'http://srv472013.hstgr.cloud:9100'
 };
