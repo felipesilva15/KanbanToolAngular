@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://srv472013.hstgr.cloud:9100'
+  apiUrl: 'https://kanban-tool-api.felipesilva15.com.br'
 };
